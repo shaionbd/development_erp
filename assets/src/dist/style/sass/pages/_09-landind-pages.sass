@@ -1,0 +1,255 @@
+.text-o
+  h1
+    font-size: 30px
+    color: $color5
+    letter-spacing: 2px
+    line-height: 43px
+  p
+    font-size: 16px
+    color: $color5
+    margin: 40px 0
+    font-weight: 300
+    line-height: 26px
+#landing-navbar
+  .navbar
+    background-color: transparent
+    z-index: 1
+    padding: 0
+    border-bottom: 1px solid rgba(0,0,0,0.1)
+    .navbar-toggler
+      background-color: #fff
+      margin-top: 8px
+      cursor: pointer
+      .zmdi
+        color: $color1
+    .navbar-brand
+      img
+        width: 50%
+        height: 50%
+    .navbar-nav
+      .nav-item
+        .nav-link
+          +font1
+          color: #fff
+          letter-spacing: 1px
+          padding: 30px 10px
+          font-weight: 400
+          font-size: 16px
+          text-transform: uppercase
+          transition: all 0.333s
+          &:hover
+            opacity: 0.6
+        .btn
+          background-color: $color5
+          color: #fff
+          border-radius: 0
+          padding-left: 30px
+          padding-right: 30px
+          margin-left: 30px
+#landing-hero
+  background: url('../../../src/img/bg-1.jpg') center center fixed
+  background-size: cover
+  position: relative
+  margin-top: -85px
+  &:before
+    content: ''
+    position: absolute
+    background-color: $color1
+    opacity: 0.9
+    width: 100%
+    height: 100%
+  .text
+    margin: 260px 0 60px 0
+    text-align: center
+    h1
+      font-size: 40px
+      margin-bottom: 40px
+      line-height: 50px
+    p
+      font-weight: 300
+      font-size: 16px
+      line-height: 30px
+  .img
+    width: 100%
+    img
+      width: 100%
+      border-top-left-radius: 5px
+      border-top-right-radius: 5px
+      box-shadow: 0px -20px 100px rgba(0,0,0,0.6)
+      cursor: pointer
+      transition: all 0.333s
+      transform: scale(1.005)
+      &:hover
+        transform: scale(1.01)
+#about
+  background-color: $color5
+  padding: 60px 0 0 0
+  .cards
+    padding: 50px 30px
+    display: flex
+    .icon
+      flex: 1
+      .zmdi
+        font-size: 30px
+        color: $color1
+    .text
+      flex: 9
+      margin-top: 10px
+      h1
+        margin-bottom: 30px
+        font-weight: 300
+        font-size: 30px
+      p
+        font-weight: 300
+        font-size: 14px
+        line-height: 30px
+        letter-spacing: 2px
+  .full-btn
+    margin-top: 40px
+    .btn
+      width: 100%
+      border-radius: 0
+      padding: 25px
+      text-transform: uppercase
+      background: linear-gradient(left , $color1 , #3c3f93 )
+      cursor: pointer
+      font-size: 20px
+      .zmdi
+        font-size: 20px
+        margin-right: 10px
+#intro
+  padding: 100px 0 40px 0
+  background-color: #fff
+  .head-section
+    h1
+      font-size: 44px
+      font-weight: 300
+      letter-spacing: 2px
+      line-height: 70px
+      color: $color5
+      margin-bottom: 20px
+    p
+      font-size: 14px
+      letter-spacing: 2px
+      line-height: 24px
+      font-weight: 400
+      color: $color5
+      margin-bottom: 100px
+  .text
+    margin-bottom: 60px
+    h1
+      font-size: 50px
+      font-weight: 300
+      letter-spacing: 1px
+      color: $color5
+    p
+      font-size: 14px
+      font-weight: 500
+      letter-spacing: 2px
+      color: $color5
+      margin-top: 40px
+#subscribe
+  padding: 100px
+  text-align: center
+  border-top: 1px solid #e8e8e8
+  .text
+    margin-bottom: 60px
+    h1
+      font-size: 30px
+      color: $color5
+      letter-spacing: 2px
+    p
+      font-size: 16px
+      color: $color5
+      margin: 40px 0
+      font-weight: 300
+  .s-form
+    padding: 0 250px
+    display: flex
+    input
+      flex: 3
+      margin-right: 30px
+      padding: 20px
+      border: 0
+      +font1
+      font-size: 14px
+      letter-spacing: 2px
+      color: $color5
+      text-transform: capitalize
+      &:hover , &:active , &:focus
+        outline: none
+    .btn
+      flex: 1
+      padding-top: 22px
+      text-transform: capitalize
+      font-size: 14px
+      letter-spacing: 4px
+      border-radius: 0
+      background-color: $color1
+#plans
+  background-color: #fff
+  padding: 100px 0
+  border-top: 1px solid $color6
+  .price
+    padding: 40px
+    margin: 0 40px
+    border-radius: 5px
+    border: 1px solid $color6
+    h1
+      font-size: 40px
+#service
+  background-color: $color1
+  padding: 100px 0
+  text-align: center
+  p , h1
+    color: #fff
+    padding: 0 260px
+  .btn
+    background-color: #fff
+    padding: 15px 40px
+    color: $color1
+#footer
+  background-color: $color5
+  p
+    letter-spacing: 2px
+    font-weight: 300
+    font-size: 14px
+    padding: 50px 0
+  .social
+    text-align: right
+    padding: 40px 0
+    .zmdi
+      padding: 10px 15px
+      font-size: 18px
+      border-radius: 5px
+      background-color: $color5--
+      cursor: pointer
+      transition: all 0.333s
+      &:hover
+        opacity: 0.5
+@media (max-width: 576px)
+  #subscribe
+    padding: 100px 0
+    h1 , p
+      line-height: 40px
+    .s-form
+      padding: 0
+      display: flex
+      flex-direction: column
+      input
+        margin: 0 0 30px 0
+  #landing-navbar
+    .navbar
+      background-color: $color1--
+      .btn
+        background-color: $color5
+        margin: 0 !important
+  #plans
+    .price
+      margin: 40px 0 0 0
+  #service
+    h1 , p
+      padding: 0
+  #footer
+    p , .social
+      text-align: center

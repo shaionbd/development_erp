@@ -1,0 +1,9 @@
+@media print {
+    #printArea {
+        width: 100%;
+    }
+}
+
+@page {
+    size: landscape;
+}

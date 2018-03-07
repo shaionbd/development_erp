@@ -1,0 +1,1110 @@
+/* start google map
+#google-map
+  iframe
+    border-radius: 5px
+/* end google map
+
+/* start viector map
+#v-map
+  .jqvmap-zoomin , .jqvmap-zoomout
+    width: 20px
+    height: 20px
+    background-color: $color1
+  .jqvmap-zoomout
+    margin-top: 10px
+/* end viector map
+
+/* start email inbox
+#myinbox
+  .top
+    .btns
+      .active
+        border-bottom: 1px solid $color1
+      .btn
+        width: auto
+        color: $color1
+        background-color: #fff
+        border-radius: 0
+        padding: 30px 20px
+        margin: 0 10px
+    .icons
+      border-top: 1px solid $color6
+      text-align: right
+      .zmdi
+        padding: 28px
+        font-size: 25px
+        border-left: 1px solid $color6
+        margin: 0
+  .bottom
+    border-top: 1px solid $color6
+    .left
+      padding: 30px 0 0 30px
+      .compose
+        padding: 20px
+        margin-bottom: 30px
+        cursor: pointer
+      h1
+        color: $color5
+        margin: 30px 0
+      ul.nav
+        display: flex
+        flex-direction: column
+        li.nav-item
+          a.nav-link
+            color: $color1
+            border-radius: 5px
+            transition: all 0.333s
+            &:hover
+              background-color: $color6
+      ul.fav
+        .badge
+          margin-right: 10px
+    .right
+      border-left: 1px solid $color6
+      .wrapper
+        .top
+          padding: 30px
+          .icon
+            .zmdi
+              background-color: rgba(0,0,0,0.04)
+              border-radius: 5px
+              border: 1px solid rgba(0,0,0,0.09)
+              padding: 10px 14px
+              cursor: pointer
+              transition: all 0.333s
+              &:hover
+                color: $color1
+                background-color: #fff
+          .btns
+            display: flex
+            .btn
+              width: auto
+              padding: 10px
+              border: 1px solid $color6
+          .by
+            text-align: right
+        .bottom
+          h1
+            color: $color5
+          .email
+            border-bottom: 1px solid $color6
+            padding: 20px
+            transition: all 0.333s
+            cursor: pointer
+            &:hover
+              .img
+                border: 1px solid $color1
+                transition: all 0.333s
+                img
+                  transform: scale(1.2)
+                  transition: all 0.333s
+              h1 , p
+                color: $color1
+            .img
+              width: 60px
+              height: 60px
+              overflow: hidden
+              border-radius: 50%
+              transition: all 0.333s
+              img
+                width: 100%
+                transition: all 0.333s
+            .text
+              display: block
+              margin: 0
+              padding: 0
+              transition: all 0.333s
+              h1
+                font-size: 18px
+                font-weight: 600
+                transition: all 0.333s
+              p
+                font-weight: 400
+                font-style: italic
+                transition: all 0.333s
+            .date
+          .single-email
+            .title
+              padding: 40px
+              border-bottom: 1px solid $color6
+              margin-bottom: 30px
+              h1
+                font-size: 20px
+            .type
+              margin-left: 40px
+              margin-bottom: 30px
+              .badge
+                margin-left: 10px
+            .info
+              display: flex
+              .img
+                width: 60px
+                height: 60px
+                overflow: hidden
+                border-radius: 50%
+                margin-left: 40px
+                margin-bottom: 30px
+                img
+                  width: 100%
+              .text-card
+                margin: 14px 20px
+            .post
+              margin: 0 40px
+              p
+                font-weight: 400
+                margin-bottom: 20px
+            .attachments
+              margin-left: 40px
+              padding-top: 20px
+              border-top: 1px solid $color6
+              margin-bottom: 30px
+              .head
+                margin-bottom: 20px
+              .attch
+                display: flex
+                flex-direction: row
+                .img
+                  height: 80px
+                  width: 80px
+                  border-radius: 5px
+                  overflow: hidden
+                  margin-right: 20px
+                  img
+                    height: 100%
+                    opacity: 0.8
+                    transition: all 0.333s
+                    cursor: pointer
+                    &:hover
+                      opacity: 1
+          .send-email
+            padding: 30px
+            .form
+              &:last-child
+                float: right
+              textarea
+                padding: 10px
+              .btn
+                width: auto
+                padding: 10px 40px
+                text-align: right !important
+                float: right !important
+
+#inbox
+  .top
+    border-bottom: 1px solid $color6
+    display: flex
+    .left
+      flex: 2
+      display: flex
+      a.btn
+        +font1
+        border-radius: 0
+        color: $color1
+        font-size: 15px
+        padding: 20px 0
+        transition: all 0.333s
+        &:hover , &:active , &:focus
+          border-bottom: 1px solid $color1
+      a.active
+        border-bottom: 1px solid $color1
+    .center
+      flex: 1
+    .right
+      flex: 4
+      display: inline-flex
+      .left
+        float: left
+        margin-right: 355px
+        a.btn-info
+          padding: 21px 40px
+          border-radius: 0
+          background-color: $color6
+          +font1
+          color: $color5
+          &:hover , &:active , &:focus
+            border-bottom: 0
+      .right
+        float: right
+        text-align: right
+        span.zmdi
+          font-size: 28px
+          padding: 20px
+          color: $color5
+          border-left: 1px solid  $color6
+          transition: all 0.333s
+          &:hover
+            color: $color1
+  .list
+    display: flex
+    .left
+      flex: 1
+      border-right: 1px solid $color6
+      padding: 40px
+      .compose
+        margin-bottom: 50px
+        cursor: pointer
+      ul.nav
+        display: flex
+        flex-direction: column
+        margin-bottom: 50px
+        h1
+          +font1
+          color: $color5
+          font-size: 13px
+          margin-bottom: 20px
+          letter-spacing: 2px
+          text-transform: uppercase
+        li
+          a
+            +font1
+            color: $color1
+            transition: all 0.333s
+            text-transform: capitalize
+            &:hover
+              background-color: $color6
+              border-radius: 5px
+          .zmdi
+            margin-right: 6px
+      ul.fav
+        li
+          a
+            color: $color5
+          .badge
+            float: right
+    .right
+      flex: 4
+      display: flex
+      flex-direction: column
+      .top
+        display: flex
+        padding: 20px 40px
+        .icon
+          flex: 1
+          i
+            padding: 10px 12px
+            background-color: $color6
+            border-radius: 5px
+            border: 1px solid rgba(0,0,0,0.1)
+            cursor: pointer
+            transition: all 0.333s
+            &:hover
+              background-color: #fff
+              color: $color1
+        .by
+          margin-top: 10px
+          a
+            color: $color1
+        .btns
+          flex: 1
+          display: flex
+          .btn
+            width: auto !important
+            background-color: #fff
+            border-radius: 0
+            border: 1px solid $color6
+            color: $color5
+            margin-right: 10px
+        .title
+          padding-top: 12px
+          flex: 1
+          h1
+            color: $color5
+            font-size: 20px
+      .bottom
+        .email
+          border-bottom: 1px solid $color6
+          display: flex
+          flex-direction: row
+          padding: 20px
+          cursor: pointer
+          transition: all 0.222s
+          &:hover
+            background-color: rgba(0,0,0,0.01)
+            h1 , p
+              color: $color1 !important
+            .img
+              border: 1px solid $color1
+              img
+                transform: scale(1.1)
+          .img
+            height: 50px
+            width: 50px
+            overflow: hidden
+            border-radius: 100%
+            border: 1px solid rgba(0,0,0,0.01)
+            transition: all 0.222s
+            img
+              width: 100%
+              transition: all 0.222s
+          .text
+            flex: 10
+            text-align: left
+            display: flex
+            flex-direction: column
+            margin: 0 0 0 20px
+            padding: 0
+            transition: all 0.222s
+            h1
+              +font1
+              color: $color5
+              font-size: 16px
+              font-weight: 600
+              margin: 0
+              padding: 0
+              transition: all 0.222s
+            p
+              line-height: 20px
+              font-weight: 400
+              transition: all 0.222s
+          .date
+            flex: 0.5
+            margin-top: 10px
+            h1
+              color: $color5
+              transition: all 0.222s
+        .single-email
+          padding: 40px 30px 20px 30px
+          .title
+            h1
+              +font1
+              color: $color5
+              font-size: 20px
+              letter-spacing: 2px
+          .type
+            span
+              margin-top: 20px
+              margin-right: 10px
+              +font1
+              text-transform: capitalize
+          .info
+            display: flex
+            margin-top: 30px
+            .img
+              height: 60px
+              width: 60px
+              overflow: hidden
+              border-radius: 50%
+              img
+                width: 100%
+            .text
+              display: flex
+              flex-direction: column
+              margin: 0
+              padding-top: 10px
+              padding-left: 20px
+              h1 , p
+                padding: 0
+                margin: 0
+              h1
+                font-weight: 600
+                font-size: 16px
+          .post
+            margin-top: 20px
+            padding-bottom: 40px
+            border-bottom: 1px solid $color6
+            p
+              font-weight: 400
+              margin-bottom: 20px
+              &:last-child
+                margin-bottom: 0
+          .attachments
+            margin-top: 20px
+            .head
+              margin-bottom: 20px
+              h1
+                color: $color5
+                font-size: 16px
+            .attch
+              display: flex
+              margin: 40px 0 20px 0
+              .img
+                height: 100px
+                width: 100px
+                overflow: hidden
+                border-radius: 5px
+                margin-right: 20px
+                img
+                  height: 100%
+                  cursor: pointer
+                  transition: all 0.333s
+                  &:hover
+                    opacity: 0.8
+        .compose-email
+          padding: 40px
+          .form
+            display: flex
+            margin: 0
+            padding: 0
+            .text
+              flex: 1
+              padding: 0
+              margin: 0
+            .right
+              flex: 9
+              margin: 0
+              padding: 0
+          .btn
+            width: auto
+            padding: 15px 80px
+            float: right
+            margin-left: 30px
+/* end email inbox
+
+/* start calinder
+#calender
+  p
+    padding-bottom: 30px
+    border-bottom: 1px solid $color6
+  #Mycalender
+  padding-top: 30px
+  .fc-toolbar
+    .fc-right
+      button
+        background: #fff
+        +font1
+        color: $color5
+        text-transform: capitalize
+        box-shadow: 0 0 0
+        border: 1px solid rgba(0,0,0,0.1)
+        transition: all 0.333s
+        &:hover
+          background-color: #fff
+          border: 1px solid $color1
+          color: $color1
+  .fc-view
+    .fc-head
+      background-color: #fff
+      .fc-day-header
+        border: 0 !important
+        text-align: left
+        +font1
+        color: $color1
+        font-weight: 400
+      .fc-head-container
+        border: 0
+        padding: 10px 0
+    .fc-body
+      .fc-event-container
+        a
+          background-color: $color1
+          border: 0
+          padding: 4px 10px
+          margin: 10px
+          +font1
+          text-transform: capitalize
+          color: #fff
+          box-shadow: 0px 0px 10px 1px $color1
+        a.info
+          background-color: $color2
+          box-shadow: 0px 0px 10px 1px $color2
+        a.danger
+          background-color: $color3
+          box-shadow: 0px 0px 10px 1px $color3
+        a.primary
+          background-color: $color4
+          box-shadow: 0px 0px 10px 1px $color4
+      .fc-widget-content
+        border-color: $color6
+        color: rgba(0,0,0,0.2)
+        .fc-day-number
+          padding: 10px 10px 0 0
+      .fc-state-highlight
+        background-color: $color6
+/* end calinder
+
+/* start billing
+#billing
+  .your-plan
+    .wrraper
+      display: flex
+      p
+        text-transform: uppercase
+      h1
+        margin-top: 10px
+        +font1
+        color: $color1
+        font-size: 25px
+      .first
+        flex: 1
+        padding: 20px
+        background-color: rgba(0,0,0,0.01)
+        border-bottom-left-radius: 3px
+        border: 1px solid $color6
+        border-bottom: 0
+        border-left: 0
+      .soc
+        flex: 1
+        padding: 20px
+        background-color: rgba(0,0,0,0.02)
+        border-bottom-left-radius: 3px
+        border: 1px solid $color6
+        border-bottom: 0
+        border-left: 0
+        h1
+          color: $color2
+      .thr
+        flex: 1
+        padding: 20px
+        background-color: rgba(0,0,0,0.03)
+        border-bottom-left-radius: 3px
+        border: 1px solid $color6
+        border-bottom: 0
+        border-left: 0
+        h1
+          color: $color3
+  .hestory
+    .table
+      thead
+        tr
+          th
+            +font1
+            background-color: $color6
+            color: $color5
+            font-weight: 600
+            letter-spacing: 1px
+      tbody
+        tr
+          td
+            +font1
+            color: $color5
+            text-transform: capitalize
+            font-size: 14px
+            border: 0
+            padding-top: 15px
+            a
+              color: $color1
+              text-decoration: none
+          td.paid
+            color: $color3
+            font-weight: 600
+          td.unpaid
+            font-weight: 600
+            color: $color4
+  .details
+    .wrapper
+      display: flex
+      .right
+        flex: 1
+        p
+          font-weight: 600
+      .left
+        flex: 1
+        h2
+          opacity: 0.5
+/* end billing
+
+/* start invoicing
+#invoice
+  .invoice-head
+    .left
+      .img
+      .text
+        display: flex
+        flex-direction: column
+        h1
+          font-size: 24px
+          color: $color5
+          font-weight: 600
+          padding: 0
+          margin: 0
+          margin-bottom: 20px
+        p
+          padding-right: 50px
+          margin: 0
+        color: rgba(0,0,0,0.5)
+    .right
+      float: right
+      margin-top: 30px
+      text-align: right
+      h1
+        font-size: 26px
+        color: $color5
+        margin-bottom: 20px
+  .products
+    margin-top: 60px
+    .table
+      thead
+        th
+          border: 0
+      tbody
+        tr
+          th , td
+            border: 0
+            padding-top: 20px
+  .colecting
+    .left
+      display: flex
+      .text
+        display: flex
+        flex-direction: column
+        margin-right: 20px
+        h1
+          font-weight: 600
+          font-size: 18px
+          margin-bottom: 15px
+          color: $color1
+  .paying
+    .btns
+      display: flex
+      flex-direction: row
+      float: right
+      margin-bottom: 40px
+      .btn
+        width: auto
+        margin-right: 20px
+        margin-top: 50px
+/* end invoicing
+
+/* start orders history
+#order-history
+  .big
+    p.head
+      font-size: 18px
+      border-bottom: 1px solid $color6
+      padding-bottom: 20px
+    .controls
+      margin-top: 30px
+      .left
+        a
+          width: auto
+          padding: 12px 30px
+          border-radius: 0
+      .right
+        display: flex
+        flex-direction: row
+        float: right
+        .btn
+          width: auto
+          padding: 12px 30px
+          border-radius: 0
+          margin-right: 30px
+        .form
+          margin: 0
+          position: relative
+          input
+            padding-right: 100px
+          span.input-group-addon
+            border: 0
+            background-color: transparent
+            border-left: 0
+            font-size: 22px
+            position: absolute
+            z-index: 99
+            right: 0
+            top: 4px
+            cursor: pointer
+    .hestory
+      margin-top: 30px
+      .card-body
+        margin-bottom: 0
+        padding-bottom: 0
+/* end orders history
+
+/* start profile page
+#profile
+  .side
+    text-align: center
+    .img
+      height: 100px
+      width: 100px
+      overflow: hidden
+      border-radius: 50%
+      margin: 0 auto
+      img
+        height: 100%
+    .info
+      h1
+        color: $color5
+        font-size: 20px
+        margin: 20px 0
+      p
+        a
+          +font1
+          color: $color5
+          text-decoration: none
+          font-weight: 600
+      p
+        +font1
+        color: $color5
+        font-weight: 300
+        font-size: 12px
+        line-height: 20px
+        margin-bottom: 10px
+    .skils
+      text-align: left
+      border-top: 1px solid $color6
+      padding-top: 40px
+      margin-top: 40px
+      p
+        margin-bottom: 30px
+        font-size: 23px
+        text-transform: uppercase
+        color: rgba(0,0,0,0.4)
+      .btn
+        width: auto
+        margin-bottom: 5px
+        background-color: #fff
+        border: 1px solid $color6
+        color: rgba(0,0,0,0.6)
+        font-size: 12px
+        transition: all 0.333s
+        &:hover
+          background-color: $color1
+          color: #fff
+          border: 1px solid $color1
+    .social
+      text-align: left
+      border-top: 1px solid $color6
+      padding-top: 40px
+      margin-top: 40px
+      p
+        margin-bottom: 30px
+        font-size: 23px
+        text-transform: uppercase
+        color: rgba(0,0,0,0.4)
+    ul.nav
+      display: flex
+      flex-direction: column
+      li
+        a
+          +font1
+          color: $color1
+          transition: all 0.333s
+          .zmdi
+            margin-right: 10px
+        &:hover
+          opacity: 0.5
+  .content
+    .post
+      .form
+        textarea
+          +font1
+          padding: 10px 20px
+        .btn
+          width: auto
+          margin-right: 20px
+        .btn-secondary
+          border: 1px solid $color6
+          background-color: #fff
+          transition: all 0.333s
+          margin-right: 10px
+          &:hover
+            background-color: $color1
+            border: 1px solid $color1
+            .zmdi
+              color: #fff
+          .zmdi
+            padding: 0
+            color: rgba(0,0,0,0.3)
+            transition: all 0.333s
+/* start experience
+#experience
+  .card-head
+    border-bottom: 1px solid $color6
+  .text
+      display: flex
+      flex-direction: column
+      margin: 0 0 30px 0 !important
+      padding-bottom: 30px
+      border-bottom: 1px solid $color6
+      &:last-child
+        padding: 0
+        margin: 0 !important
+        border: 0
+      h1
+        font-size: 18px
+        color: $color1 !important
+        font-weight: 400 !important
+        margin-bottom: 10px
+      h2
+        margin-bottom: 6px
+      h3
+        color: rgba(0,0,0,0.2) !important
+        margin-bottom: 10px
+      p
+        color: rgba(0,0,0,0.4) !important
+        font-weight: 500
+        line-height: 18px !important
+/* end experience
+/* start timeline
+#timeline
+  ul.timeline
+    margin: 0
+    padding: 0
+    position: relative
+    &:before
+      content: ''
+      position: absolute
+      top: 15px
+      bottom: 0
+      width: 2px
+      background: rgba(0,0,0,0.1)
+      left: 120px
+    li.timeline-item
+      list-style: none
+      display: flex
+      position: relative
+      margin-bottom: 30px
+      &:last-child
+        margin-bottom: 0
+      &:before
+        content: ''
+        position: absolute
+        top: 15px
+        left: 113px
+        width: 16px
+        height: 16px
+        background-color: $color1
+        border-radius: 50%
+      .timeline-date
+        flex: 1.4
+        margin-top: 12px
+      .timeline-content
+        flex: 6
+        .timeline-avatar
+          float: left
+          height: 50px
+          width: 50px
+          overflow: hidden
+          border-radius: 50%
+          margin-right: 20px
+          img
+            height: 100%
+        .timeline-header
+          display: flex
+          .first
+            flex: 1
+          .last
+          .bottom
+            float: left
+        .timeline-fotter
+          p
+            font-weight: 300
+  .card-head
+    border-bottom: 1px solid $color6
+/* end timeline
+/* end profile page
+
+/* start fqa page
+#fqa
+  p.head
+    font-size: 22px
+    margin-bottom: 10px
+  .head-ask
+    margin-top: 30px
+    margin-bottom: 60px
+    text-align: center
+    .icon
+      margin-top: 40px
+      .zmdi
+        font-size: 30px
+        padding: 20px 40px
+        border: 3px solid $color6
+        border-radius: 5px
+    .text
+      display: flex
+      flex-direction: column
+      h1
+        font-size: 22px
+        font-weight: 600 !important
+        margin-bottom: 20px
+      p
+        font-weight: 300
+        line-height: 20px
+      margin-bottom: 30px
+    .btn
+      width: auto !important
+      margin-bottom: 30px
+      padding: 12px 30px
+      background-color: $color5
+      &:hover
+        color: #fff
+        opacity: 0.8
+  .asks
+    margin-top: 30px
+    .card
+      p.head
+        font-weight: 600
+      p
+        font-weight: 400
+/* end fqa page
+
+/* start pricing page
+#price
+  .head
+    text-align: center
+    margin-top: 50px
+    h1
+      color: $color5
+      font-weight: 600
+      font-size: 24px
+      line-height: 28px
+    p
+      color: $color5
+      font-weight: 300
+      margin-top: 20px
+      line-height: 22px
+  .tables
+    margin-top: 40px
+    text-align: center
+    .teable-head
+      background-color: rgba(0,0,0,0.02)
+      border-top-left-radius: 5px
+      border-top-right-radius: 5px
+      padding: 40px
+      border-bottom: 1px solid rgba(0,0,0,0.04)
+      p.h
+        font-size: 16px
+        text-align: center
+        margin: 0 auto
+      h1
+        color: $color5
+        font-size: 62px
+        margin: 40px 0
+      p
+        margin-left: 70px
+    .table-body
+      margin: 40px
+      text-align: left
+      p
+        font-size: 16px
+        font-weight: 400
+        padding-bottom: 10px
+      .btn
+        margin: 30px 0 0 0
+        padding: 20px
+/* start pricing page
+
+/* start ex spicle pages
+#ex-page
+  background: $color1
+  width: 100%
+  padding: 200px 0
+  // height: 100vh
+  .logo-wrapper
+    display: none
+    margin: 0 auto
+    .logo
+      width: 130px
+      height: 40px
+      overflow: hidden
+      text-align: center
+      img
+        height: 100%
+        width: 100%
+  .card
+    margin: 60px 30px 0 30px
+    border: 0
+    // box-shadow: 0px 5px 100px $color2
+    color: $color5
+    .text
+      text-align: center
+      border-bottom: 1px solid $color6
+      padding: 30px
+      margin-bottom: 30px
+      p
+        color: $color5
+        font-size: 20px
+        text-transform: uppercase
+        position: relative
+        &::after
+          position: absolute
+          content: ''
+          background-color: $color1
+          // box-shadow: 0px 1px 10px $color2
+          width: 122px
+          height: 3px
+          right: 34%
+          top: 40px
+    .inputs
+      padding: 30px 30px
+      .btn
+        width: 100%
+        padding: 12px
+  .home
+    margin-left: 12px
+    margin-top: 30px
+    .btn
+      background-color: transparent
+  .img
+    width: 80px
+    height: 80px
+    overflow: hidden
+    margin: 0 auto
+    border-radius: 100%
+    border: 2px solid $color1
+    // box-shadow: 0px 5px 10px $color2
+    img
+      width: 100%
+  .err
+    padding: 120px
+    text-align: center
+    h1
+      color: $color1
+      font-size: 20px
+      margin-top: 100px
+    h2
+      color: $color5
+      font-size: 14px
+      margin-top: 30px
+    p
+      color: $color1
+      font-size: 150px
+      // text-shadow: 0px 5px 10px $color2
+  @media (max-width: 576px)
+    .err
+      padding: 60px 0
+      p
+        padding-top: 30px
+
+/* end ex spical pages
+
+/* start changeloge
+#changeloge
+  .card-head
+    border-bottom: 1px solid $color6
+    .left
+      p
+        color: $color5
+        margin-top: 20px
+        font-size: 14px
+    .right
+      display: flex
+      flex-direction: row
+      margin-top: 10px
+      p
+        color: rgba(0,0,0,0.3)
+        margin: 10px 16px 0 0
+      span
+        background-color: rgba(0,0,0,0.06)
+        border: 1px solid rgba(0,0,0,0.1)
+        border-radius: 5px
+        margin-bottom: 10px
+        padding: 2px 14px
+        font-size: 12px
+        letter-spacing: 1px
+        font-weight: 600
+  .card-body
+    p
+      font-weight: 400
+    pre
+      margin: 20px 0 0 0
+      color: $color5
+      font-size: 12px
+      font-weight: 300
+/* end changeloge
+
+// start loding
+#loading
+  background-color: rgba(126,128,231,0.96)
+  width: 100%
+  height: 100%
+  position: fixed
+  z-index: 999999999
+  p
+    text-align: center
+    margin-top: 26%
+    font-size: 24px
+    font-weight: 300
+    letter-spacing: 8px
+// end loadong

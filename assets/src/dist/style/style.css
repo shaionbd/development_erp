@@ -1,0 +1,88 @@
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+
+/* Track */
+
+::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+
+/* Handle */
+
+::-webkit-scrollbar-thumb {
+    background: #888;
+}
+
+
+/* Handle on hover */
+
+::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+
+.form-control:hover,
+.form-control:active,
+.form-control:focus {
+    outline: 0;
+    border: 3px solid #6F6486;
+}
+
+.form input,
+.form select,
+.form textarea {
+    -webkit-box-flex: 5;
+    -ms-flex: 5;
+    flex: 5;
+    border: 3px solid #efefef;
+    border-radius: 0;
+    margin-bottom: 30px;
+    color: #6F6486 !important;
+}
+
+.color-default>p {
+    color: #333;
+    line-height: 1.875;
+}
+
+.font-16 {
+    font-size: 16px;
+}
+
+.font-18 {
+    font-size: 18px;
+}
+
+.font-20 {
+    font-size: 20px;
+}
+
+.font-22 {
+    font-size: 22px;
+}
+
+.font-24 {
+    font-size: 24px;
+}
+
+.font-26 {
+    font-size: 26px;
+}
+
+#content .card .card-body .btn .zmdi {
+    padding-right: 0px;
+}
+
+body {
+    color: #232323;
+}
+
+#content .card .full-display {
+    display: block !important;
+}
+
+.hidden {
+    display: none;
+}

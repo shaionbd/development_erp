@@ -1,0 +1,92 @@
+#validator
+  .form
+    display: block
+    margin-bottom: 30px
+    input
+      margin: 0
+    span.input-group-addon
+      border: 3px solid $color6
+      background-color: $color6
+    button
+      padding: 20px
+      cursor: pointer
+.form
+  display: flex
+  margin: 0 10px
+  p
+    flex: 1
+    +font1
+    font-size: 14px
+    margin-top: 8px
+  input
+    flex: 5
+    border: 3px solid $color6
+    border-radius: 0
+    margin-bottom: 30px
+    color: $color1 !important
+  textarea
+    flex: 5
+    border: 3px solid $color6
+    border-radius: 0
+    margin-bottom: 30px
+    color: $color1 !important
+    &:hover , &:active , &:focus
+      border: 3px solid $color1
+  input.success
+    border-color: $color1
+    color: $color1 !important
+  input.info
+    border-color: $color2
+    color: $color2 !important
+  input.warning
+    border-color: $color3
+    color: $color3 !important
+  input.danger
+    border-color: $color4
+    color: $color4 !important
+  input.black
+    border-color: $color5
+    color: $color5 !important
+.x-form
+  input
+    padding: 20px
+.xx-form
+  input
+    padding: 30px
+.xxx-form
+  input
+    padding: 40px
+.xxxx-form
+  input
+    padding: 50px
+.uplode
+  input.up
+    overflow: hidden
+    width: 0
+    height: 0
+    position: absolute
+    z-index: 1
+  label
+    text-align: center
+    cursor: pointer
+    span
+      +font1
+      font-size: 14px
+.valed
+  border: 3px solid red
+#submit-valed
+  width: 20% !important
+  float: right
+  margin-right: 10px
+  cursor: pointer
+#myDropzone
+  padding: 80px
+  border: 1px dashed $color1
+  border-radius: 5px
+  +font1
+  color: $color1
+  font-weight: 600
+  letter-spacing: 2px
+  input
+    visibility: hidden
+    position: absolute

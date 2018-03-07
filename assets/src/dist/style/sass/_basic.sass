@@ -1,0 +1,256 @@
+body
+  background-color: rgba(0,0,0,0.03)
+  font-family: 'Open Sans', sans-serif
+  font-weight: 600
+  color: #fff
+  font-size: 12px
+  line-height: 12px
+  letter-spacing: 1px
+h1,h2,h3,h4,h5,h6,p
+  padding: 0
+  margin: 0
+  text-transform: capitalize
+  font-family: 'Open Sans', sans-serif
+  font-weight: 600
+  color: #fff
+  font-size: 12px
+  line-height: 12px
+  letter-spacing: 1px
+code , pre
+  font-size: 12px
+  background-color: $color6
+  padding: 4px 8px
+  margin: 0 8px
+  border-radius: 5px
+  font-size: 10px
+  font-weight: 600
+  color: $color4
+hr
+  margin: 45px 0
+input.form-control
+  +font1
+  font-size: 14px
+  text-transform: capitalize
+  transition: all 0.333s
+  &:hover , &:active , &:focus
+    outline: 0
+    border: 3px solid $color1
+p.lead
+  font-size: 14px
+  line-height: 24px
+p.info
+  margin-bottom: 40px
+.h1,.h2,.h3,.h4,.h5,.h6
+  margin-bottom: 20px
+
+/* General
+.btn
+  font-family: 'Open Sans'
+  border: 0
+  color: #fff
+  text-transform: capitalize
+  letter-spacing: 1px
+  &:focus
+    box-shadow: 0 0 0
+    outline: 0
+    color: #fff
+    opacity: 1
+.btn2
+  border-bottom: 2px solid rgba(0 , 0 , 0 , 0.3)
+.btn-b
+  border-radius: 50px
+.btn-link
+  &:hover , &:active
+    box-shadow: 0 0 0
+    outline: 0
+    color: $color1--
+.btn-primary
+  background-color: $color1
+  &:hover , &:active
+    background-color: $color1
+    opacity: .7
+    box-shadow: 0 0 0
+    outline: 0
+    color: #fff
+.btn-secondary
+  background-color: lightgray
+  &:hover , &:active
+    background-color: lightgray
+    color: #fff
+    opacity: .7
+    box-shadow: 0 0 0
+    outline: 0
+.btn-success
+  background-color: lightgreen
+  &:hover , &:active
+    background-color: lightgreen
+    opacity: .7
+    box-shadow: 0 0 0
+    outline: 0
+    color: #fff
+.btn-info
+  background-color: $color2
+  &:hover , &:active
+    background-color: $color2
+    opacity: .7
+    box-shadow: 0 0 0
+    outline: 0
+    color: #fff
+.btn-warning
+  background-color: $color3
+  &:hover , &:active
+    background-color: $color3
+    opacity: .7
+    box-shadow: 0 0 0
+    outline: 0
+    color: #fff
+.btn-danger
+  background-color: $color4
+  &:hover , &:active
+    background-color: $color4
+    opacity: .7
+    box-shadow: 0 0 0
+    outline: 0
+    color: #fff
+.btn-outline-primary
+  color: $color1
+  border: 1px solid $color1
+  &:hover , &:active
+    background-color: $color1
+    border: 1px solid $color1
+    color: #fff
+.btn-outline-danger
+  color: $color4
+  border: 1px solid $color4
+  &:hover , &:active
+    background-color: $color4
+    border: 1px solid $color4
+    color: #fff
+.btn-outline-success
+  color: lightgreen
+  border: 1px solid lightgreen
+  &:hover , &:active
+    background-color: lightgreen
+    border: 1px solid lightgreen
+    color: #fff
+.btn-outline-info
+  color: $color2
+  border: 1px solid $color2
+  &:hover , &:active
+    background-color: $color2
+    border: 1px solid $color2
+    color: #fff
+.btn-outline-warning
+  color: $color3
+  border: 1px solid $color3
+  &:hover , &:active
+    background-color: $color3
+    border: 1px solid $color3
+    color: #fff
+.btn-outline-secondary
+  color: $color6--
+  border: 1px solid $color6--
+  &:hover , &:active
+    background-color: $color6--
+    border: 1px solid $color6--
+    color: #fff
+
+/* Models
+.modal-content
+  // width: 700px
+  border: 0
+  border-radius: 3px
+  text-align: center
+  padding: 80px 20px
+  .zmdi-modal
+    font-size: 70px
+    color: $color1
+  h1
+    color: $color5
+    font-size: 24px
+    padding: 30px 0
+  p
+    +font1
+    font-size: 10px
+    line-height: 20px
+    font-weight: 300
+    padding: 0 20px 30px 20px
+    color: $color5
+  .btn
+    padding: 10px 40px
+    &:last-child
+      margin-left: 30px
+// badge
+.badge-primary , .badge
+  background-color: $color1
+  padding: 1px 10px
+  border-radius: 5px
+  +font1
+  font-weight: 300
+  font-size: 10px
+.badge-default
+  background-color: $color5
+.badge-warning
+  background-color: $color4
+.badge-info
+  background-color: $color2
+.badge-danger
+  background-color: $color3
+#modal-header
+  .modal-header
+    margin-bottom: 50px
+    padding-left: 0
+    padding-right: 0
+    h5
+      color: $color5
+  .modal-content
+    padding-top: 0
+#bigData
+  +font1
+  color: $color5
+
+// start default bg
+.bg-primary
+  background-color: $color1
+.bg-info
+  background-color: $color2
+.bg-warning
+  background-color: $color3
+.bg-danger
+  background-color: $color4
+.bg-black
+  background-color: $color5 !important
+.b-0
+  border: 0 !important
+  box-shadow: 0 0 0 !important
+  border-radius: 0 !important
+// end default bg
+// charts
+.ct-labels
+  opacity: 0.4
+.ct-grid
+ stroke: rgba(0,0,0,0.06)
+ stroke-dasharray: none
+.ct-series-a
+  .ct-bar
+    stroke: $color1
+    stroke-width: 16px !important
+    opacity: 0.8
+    &:hover
+      opacity: 1
+.ct-series-b
+  .ct-bar
+    stroke: $color2
+    stroke-width: 16px !important
+    opacity: 0.8
+    &:hover
+      opacity: 1
+.ct-series-c
+  .ct-bar
+    stroke: $color3
+    stroke-width: 16px !important
+    opacity: 0.8
+    &:hover
+      opacity: 1
+
+// start scrolbar

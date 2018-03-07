@@ -1,0 +1,1 @@
+$(window).on("load",function(){"use strict";$("body").prepend('<div id="loading" class="fixed-top"> <p> loading </p> </div>'),$("#loading").fadeOut(900)});
