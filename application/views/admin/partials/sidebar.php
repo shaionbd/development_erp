@@ -5,7 +5,7 @@
   <h1 class="head">Navigation</h1>
   <ul class="navbar-nav">
     <li class="nav-itme">
-      <a class="nav-link <?php echo ($active == 'dashboard')?'active':'';?>" data-toggle="collapse" data-target=".d2" href="<?php echo base_url();?>">
+      <a class="nav-link <?php echo ($active == 'dashboard')?'active':'';?>" href="<?php echo base_url('admin');?>">
         <i class="left zmdi zmdi-home"></i>Dashboard
       </a>
     </li>
@@ -40,6 +40,11 @@
     <li class="nav-itme">
       <a class="nav-link <?php echo ($active == 'utilities')?'active':'';?>" href="<?php echo base_url('admin/utilities');?>">
         <i class="left zmdi zmdi-collection-item-9-plus"></i>Utilities
+      </a>
+    </li>
+    <li class="nav-itme">
+      <a class="nav-link <?php echo ($active == 'banks')?'active':'';?>" href="<?php echo base_url('admin/banks');?>">
+        <i class="left zmdi zmdi-pin-assistant"></i>Banks
       </a>
     </li>
   </ul>

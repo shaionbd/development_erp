@@ -36,7 +36,7 @@
                         <form action="<?php echo base_url('admin/create/customer');?>" method="post" id="validator" data-toggle="validator" role="form">
                             <div class="form form-group">
                                 <label for="name" class="control-label"><span class="text-danger">*</span>Name</label>
-                                <input type="text" class="form-control" name="name" id="name" placeholder="your name" value="<?php echo set_value('name'); ?>" required>
+                                <input type="text" class="form-control" name="name" id="name" placeholder="customer name" value="<?php echo set_value('name'); ?>" required>
                                 <div class="help-block with-errors">
                                     <?php echo (form_error('name'))? form_error('name'):''; ?>
                                 </div>

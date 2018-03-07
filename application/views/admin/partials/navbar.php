@@ -1,7 +1,7 @@
 <div class="nav fixed-top">
     <!-- navbar left -->
-    <div class="nav-left">
-    <a href="index.html" class="brand">Amun</a>
+    <div class="nav-left text-center">
+        <a href="<?php echo base_url('admin');?>" class="brand"><img height="40" src="<?php echo base_url('assets/src/img/logo.png');?>" alt=""></a>
     </div>
     <!-- navbar right -->
     <div class="nav-right">
@@ -11,7 +11,7 @@
         </a>
         <div class="search input-group">
         <a href="" class="btn input-group-addon"><i class="zmdi zmdi-search"></i></a>
-        <input type="text" placeholder="search">
+            <input type="text" placeholder="search">
         </div>
     </div>
     <div class="right">

@@ -184,6 +184,27 @@ $config = array(
                 )
         ),
 
+        'createBank' => array(
+                array(
+                        'field' => 'name',
+                        'label' => 'Name',
+                        'rules' => 'trim|required|max_length[255]'
+                )
+        ),
+
+        'createBranch' => array(
+                array(
+                        'field' => 'name',
+                        'label' => 'Name',
+                        'rules' => 'trim|required|max_length[255]'
+                ),
+                array(
+                        'field' => 'location',
+                        'label' => 'Location',
+                        'rules' => 'min_length[5]|trim|max_length[255]'
+                )
+        ),
+
         'login' => array(
                 array(
                         'field' => 'email',

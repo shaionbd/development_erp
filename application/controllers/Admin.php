@@ -539,6 +539,52 @@ class Admin extends CI_Controller {
 		$this->load->view('admin/dashboard', $data);
     }
 
+    ######################################### Banks ##############################
+    public function get_banks(){
+        $data['title'] = $this->title;
+        $data['active'] = 'banks';
+        $data['admin'] = $this->admin;
+        $data['banks'] = $this->adminModel->get_banks();
+        $data['branches'] = $this->adminModel->get_branches_with_bank_name();
+		$this->load->view('admin/banks', $data);
+    }
+
+    public function create_bank(){
+        $this->form_validation->set_error_delimiters('<span class="text-danger">', '</span>');
+		if($this->form_validation->run('createBank')){
+            $name = $this->input->post('name');
+            $create_bank = array(
+                'name'      => $name
+            );
+            // receipt book
+            $this->adminModel->create_bank(array_filter($create_bank));
+
+            redirect(base_url('admin/banks'));
+        }else{
+            $this->get_banks();
+        }
+    }
+
+    public function create_branch(){
+        $this->form_validation->set_error_delimiters('<span class="text-danger">', '</span>');
+		if($this->form_validation->run('createBranch')){
+            $bank_id = $this->input->post('bank_id');
+            $name = $this->input->post('name');
+            $location = $this->input->post('location');
+            $create_branch = array(
+                'name'      => $name,
+                'bank_id'   => $bank_id,
+                'location'  => $location
+            );
+            // receipt book
+            $this->adminModel->create_branch(array_filter($create_branch));
+
+            redirect(base_url('admin/banks'));
+        }else{
+            $this->get_banks();
+        }
+    }
+
     ####################### Logout
     public function logout(){
 		$this->session->unset_userdata('admin_logged_in');

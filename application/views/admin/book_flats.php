@@ -133,7 +133,7 @@
                                     <div class="form form-group">
                                         <label for="bank_id" class="control-label"></span>Bank Name</label>
                                         <select class="form-control" name="bank_id" id="bank_id">
-                                            <option >Select a Bank</option>
+                                            <option>Select a Bank</option>
                                             <?php foreach($banks as $bank):?>
                                                 <option value="<?php echo $bank->id;?>"><?php echo $bank->name;?></option>
                                             <?php endforeach;?>

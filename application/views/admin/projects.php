@@ -87,7 +87,7 @@
             <div class="col-md-12">
                 <div class="card">
                     <div class="card-head">
-                        <div class="left">Powerful Datatables</div>
+                        <div class="left">Project List</div>
                         <div class="right">
                         <i class="zmdi zmdi-chevron-down"></i>
                         <i class="zmdi zmdi-refresh-sync"></i>

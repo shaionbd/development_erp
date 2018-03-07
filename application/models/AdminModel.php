@@ -134,8 +134,23 @@ class AdminModel extends CI_Model {
         return $this->db->get('banks')->result();
     }
 
+    function create_bank($data){
+        $this->db->insert('banks', $data);
+    }
+
+    function create_branch($data){
+        $this->db->insert('bank_branches', $data);
+    }
+
     function get_branches($bank_id){
         return $this->db->get_where('bank_branches',['bank_id'=>$bank_id])->result();
+    }
+
+    function get_branches_with_bank_name(){
+        $this->db->select('bank_branches.*, banks.name AS bank_name');
+        $this->db->from('bank_branches');
+        $this->db->join('banks', 'banks.id = bank_branches.bank_id');
+        return $this->db->get()->result();
     }
     ######################## /Bank ##########################
 

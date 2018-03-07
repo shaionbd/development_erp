@@ -101,5 +101,9 @@ $route['admin/create/receipt/book'] = 'admin/create_receipt_book';
 
 $route['admin/invoice/projects'] = 'admin/project_invoice';
 
+$route['admin/banks'] = 'admin/get_banks';
+$route['admin/create/bank'] = 'admin/create_bank';
+$route['admin/create/branch'] = 'admin/create_branch';
+
 $route['404_override'] = '';
 $route['translate_uri_dashes'] = FALSE;

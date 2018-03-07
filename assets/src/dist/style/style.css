@@ -86,3 +86,7 @@ body {
 .hidden {
     display: none;
 }
+
+#validator .form button {
+    padding: 5px;
+}
