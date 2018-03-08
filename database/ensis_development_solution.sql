@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Mar 03, 2018 at 04:36 AM
+-- Generation Time: Mar 08, 2018 at 06:37 AM
 -- Server version: 10.1.30-MariaDB
 -- PHP Version: 7.2.1
 
@@ -33,6 +33,14 @@ CREATE TABLE `banks` (
   `name` varchar(200) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
+--
+-- Dumping data for table `banks`
+--
+
+INSERT INTO `banks` (`id`, `name`) VALUES
+(1, 'Datch Bangla Bank Ltd'),
+(2, 'Islami Bank');
+
 -- --------------------------------------------------------
 
 --
@@ -45,6 +53,14 @@ CREATE TABLE `bank_branches` (
   `bank_id` int(11) DEFAULT NULL,
   `location` varchar(200) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `bank_branches`
+--
+
+INSERT INTO `bank_branches` (`id`, `name`, `bank_id`, `location`) VALUES
+(1, 'Dhanmondhi Branch', 1, 'Dhanmondhi 8/a'),
+(2, 'Mirpur Branch', 2, 'Mirpur 10, Dhaka, Bangladesh');
 
 -- --------------------------------------------------------
 
@@ -87,6 +103,7 @@ CREATE TABLE `flats` (
   `floor` varchar(255) DEFAULT NULL,
   `stf` varchar(255) DEFAULT NULL,
   `costs` double(15,2) DEFAULT NULL,
+  `discount` double(10,2) NOT NULL,
   `flat_ready` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
   `is_sold` int(11) DEFAULT '0'
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
@@ -95,8 +112,9 @@ CREATE TABLE `flats` (
 -- Dumping data for table `flats`
 --
 
-INSERT INTO `flats` (`id`, `name`, `project_id`, `floor`, `stf`, `costs`, `flat_ready`, `is_sold`) VALUES
-(1, 'A1', 2, '1st', '2300', 6500000.00, '2018-12-31 18:00:00', 0);
+INSERT INTO `flats` (`id`, `name`, `project_id`, `floor`, `stf`, `costs`, `discount`, `flat_ready`, `is_sold`) VALUES
+(1, 'A1', 2, '1st', '2300', 6500000.00, 0.00, '2018-12-31 18:00:00', 1),
+(2, 'A2', 2, '2nd', '2300', 6000000.00, 0.00, '2018-04-14 18:00:00', 1);
 
 -- --------------------------------------------------------
 
@@ -143,6 +161,15 @@ CREATE TABLE `receipt_books` (
   `signature_mark` varchar(200) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
+--
+-- Dumping data for table `receipt_books`
+--
+
+INSERT INTO `receipt_books` (`id`, `receive_date`, `project_id`, `flat_id`, `customer_id`, `payment_by`, `bank_id`, `branch_id`, `mr_no`, `on_account_of`, `receive_amount`, `check_cash_date`, `signature_mark`) VALUES
+(1, '2018-03-03 18:00:00', 2, 1, 1, 'Bank', 1, 1, 'x32452f32', NULL, 3500000.00, '2018-03-03 18:00:00', 'Advanced'),
+(2, '2018-03-06 18:00:00', 2, 1, 1, 'Bank', 1, 1, 'x332452f32', NULL, 15000.00, '2018-03-06 18:00:00', 'Installment'),
+(3, '2018-03-06 18:00:00', 2, 2, 1, 'Bank', 1, 1, 'x332452f32', NULL, 3500.00, NULL, 'Advanced');
+
 -- --------------------------------------------------------
 
 --
@@ -154,6 +181,7 @@ CREATE TABLE `sold_flats` (
   `project_id` int(11) DEFAULT NULL,
   `flat_id` int(11) DEFAULT NULL,
   `customer_id` int(11) DEFAULT NULL,
+  `advanced_type` varchar(255) NOT NULL,
   `advanced` double(10,2) DEFAULT NULL,
   `advanced_date` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
   `advanced_by` varchar(200) DEFAULT NULL,
@@ -163,8 +191,17 @@ CREATE TABLE `sold_flats` (
   `total_installment` varchar(20) DEFAULT NULL,
   `utilite_names` varchar(255) DEFAULT NULL,
   `utility_total_costs` double(10,2) DEFAULT NULL,
-  `total_costs` double(10,2) DEFAULT NULL
+  `total_costs` double(10,2) DEFAULT NULL,
+  `discount` double(10,2) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `sold_flats`
+--
+
+INSERT INTO `sold_flats` (`id`, `project_id`, `flat_id`, `customer_id`, `advanced_type`, `advanced`, `advanced_date`, `advanced_by`, `bank_id`, `branch_id`, `mr_no`, `total_installment`, `utilite_names`, `utility_total_costs`, `total_costs`, `discount`) VALUES
+(1, 2, 1, 1, 'Bank', 3500000.00, '2018-03-03 18:00:00', 'Shakil Hossain', 1, 1, 'x32452f32', '72', 'Rooftop', 50000.00, 6550000.00, 0.00),
+(2, 2, 2, 1, 'Bank', 3500.00, '2018-03-06 18:00:00', 'Md Shakil Hossain', 1, 1, 'x332452f32', '36', 'Garage', 200000.00, 6200000.00, 0.00);
 
 -- --------------------------------------------------------
 
@@ -206,7 +243,8 @@ CREATE TABLE `utilities` (
 --
 
 INSERT INTO `utilities` (`id`, `name`, `cost`) VALUES
-(4, 'Garage', 200000.00);
+(4, 'Garage', 200000.00),
+(5, 'Rooftop', 50000.00);
 
 --
 -- Indexes for dumped tables
@@ -286,13 +324,13 @@ ALTER TABLE `utilities`
 -- AUTO_INCREMENT for table `banks`
 --
 ALTER TABLE `banks`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT for table `bank_branches`
 --
 ALTER TABLE `bank_branches`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT for table `customers`
@@ -304,7 +342,7 @@ ALTER TABLE `customers`
 -- AUTO_INCREMENT for table `flats`
 --
 ALTER TABLE `flats`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT for table `projects`
@@ -316,13 +354,13 @@ ALTER TABLE `projects`
 -- AUTO_INCREMENT for table `receipt_books`
 --
 ALTER TABLE `receipt_books`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT for table `sold_flats`
 --
 ALTER TABLE `sold_flats`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT for table `users`
@@ -334,7 +372,7 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT for table `utilities`
 --
 ALTER TABLE `utilities`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- Constraints for dumped tables
